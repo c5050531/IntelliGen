@@ -27,6 +27,6 @@ An enterprise-grade Fake News Detection tool combining deep Transformer architec
    python app.py
    ```
 
-## 🧠 How It Works
-* **🔴 Red Weights:** Words contributing heavily toward a **FAKE** classification.
-* **🟢 Green Weights:** Words anchoring the context toward a **RELIABLE** status.
+##  How It Works
+* ** Red Weights:** Words contributing heavily toward a **FAKE** classification.
+* ** Green Weights:** Words anchoring the context toward a **RELIABLE** status.

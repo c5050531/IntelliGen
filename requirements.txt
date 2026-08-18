@@ -1,5 +1,7 @@
-transformers
-torch
-lime
 gradio
-numpy
+transformers>=4.35.0
+torch>=2.1.0 --index-url https://pytorch.org
+lime>=0.2.0.1
+streamlit>=1.28.0
+numpy>=1.24.0
+

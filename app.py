@@ -59,11 +59,11 @@ class IntelliGenEngine:
         probs = self.predict_probabilities([text]) 
         
         # Evaluate highest index score location relative to the batch row
-        pred_idx = int(np.argmax(probs[0]))
+        pred_idx = int(np.argmax(probs))
         verdict = self.class_names[pred_idx]
         
-        # CRITICAL FIX: Safe indexing into the batch row to extract the scalar confidence
-        confidence = float(probs[0][pred_idx]) * 100
+        # PERMANENT FIX: Explicitly index row 0 to grab the scalar confidence score
+        confidence = float(probs[0, pred_idx]) * 100
         
         # Locally sample alternative text iterations using LIME boundaries
         exp = self.explainer.explain_instance(
